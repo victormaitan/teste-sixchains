@@ -27,7 +27,7 @@
         </div>
         <!-- <TaskList @taskEdit="editTask" /> -->
         <!-- <TaskForm @taskSaved="fetchTasks" /> -->
-        <v-bottom-sheet>
+        <v-bottom-sheet v-model="newTaskController">
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" variant="elevated" rounded="lg" position="fixed" location="bottom" class="mb-4"
                     color="primary" size="large" prepend-icon="mdi-playlist-edit">Nova Tarefa</v-btn>
@@ -36,7 +36,7 @@
             <v-card title="Nova Tarefa" rounded="t-xl" class="glass">
                 <v-textarea class="mx-6" clearable variant="plain" placeholder="Escreva aqui..." auto-grow></v-textarea>
                 <v-row class="ma-4 d-flex justify-end ga-2">
-                    <v-btn flat color="grey-lighten-2">
+                    <v-btn variant="text" @click="newTaskController = !newTaskController">
                         Cancelar
                     </v-btn>
                     <v-btn color="success">
@@ -52,6 +52,7 @@
 import { ref } from 'vue'
 
 const tab = ref('a-fazer')
+const newTaskController = ref(false)
 
 const fetchTasks = () => {
     // Refresh the list
