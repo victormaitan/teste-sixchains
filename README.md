@@ -15,10 +15,15 @@
 - #### Obrigatórias:
 
 :white_check_mark: - Utilizar Nuxt 3 
+
 :white_check_mark: - Composition API 
+
 :white_check_mark: - CRUD  
-:white_check_mark: - Consumir os dados do fornecidos pelo firebase  
+
+:white_check_mark: - Consumir os dados do fornecidos pelo firebase 
+
 :white_check_mark: - Responsividade web e mobile
+
 :white_check_mark: - Acessibilidade
 
   
@@ -26,6 +31,7 @@
 - #### Diferenciais:
   
 :white_check_mark: - Hospedado na Vercel 
+
 :white_check_mark: - Utilizado Vuetify como fornecedor de componentes  
 
 ---
