@@ -55,7 +55,7 @@ const tab = ref('a-fazer')
 const newTaskController = ref(false)
 
 const fetchTasks = () => {
-    // Refresh
+    // Refresh task list
 }
 
 const editTask = (task) => {
