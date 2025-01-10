@@ -10,6 +10,14 @@
 
 ##### Obrigado a toda equipe da Sixchains, em especial ao Diego, pela oportunidade de demonstrar meus conhecimentos.  
 
+### :pencil: Como utilizar. Para:
+
+**Inserir** uma nova tarefa, basta clicar no botão "Nova tarefa" no canto inferior da tela 
+
+**Atualizar** uma tarefa, basta clicar no texto da tarefa desejada que será aberto um dialog 
+
+**Excluir** uma tarefa, basta clicar no botão com o icone de lixeira no fim da tarefa 
+
 ### :pencil: Requisitos a serem cumpridos:
 
 - #### Obrigatórias:
