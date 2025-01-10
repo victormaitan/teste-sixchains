@@ -47,6 +47,7 @@
       <v-card title="Nova Tarefa" rounded="t-xl" class="glass">
         <v-textarea
           class="mx-6"
+          autofocus
           clearable
           variant="plain"
           placeholder="Escreva aqui..."

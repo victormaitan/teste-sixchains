@@ -18,7 +18,7 @@
                 <v-card-text>
                   <v-row dense>
                     <v-col cols="12">
-                      <v-text-field placeholder="Descrição" aria-label="Editar descrição" required
+                      <v-text-field placeholder="Descrição" autofocus aria-label="Editar descrição" required
                         v-model="editedTask.description"></v-text-field>
                     </v-col>
                   </v-row>
