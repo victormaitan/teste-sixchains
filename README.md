@@ -18,6 +18,12 @@
 
 **Excluir** uma tarefa, basta clicar no botão com o icone de lixeira no fim da tarefa 
 
+### Para acessar o app
+
+**Usuario:** ```teste@teste.com```
+
+**Senha:**```abcd1234```
+
 ### :pencil: Requisitos a serem cumpridos:
 
 - #### Obrigatórias:
