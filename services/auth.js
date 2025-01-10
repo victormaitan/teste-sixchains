@@ -14,9 +14,8 @@ export const loginWithEmail = async (email, password) => {
 export const logout = async () => {
   try {
     await $auth.signOut();
-    console.log('Usuário desconectado');
   } catch (error) {
-    console.error(error.message);
+    alert('Erro ao fazer logout');
     throw new Error('Erro ao fazer logout');
   }
 };

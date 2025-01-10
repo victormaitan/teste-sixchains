@@ -1,10 +1,11 @@
 import { ref } from "vue";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNuxtApp } from "#app";
 
 export const useAuth = () => {
   const { $auth } = useNuxtApp();
   const user = ref(null);
+  const error = ref(null);
 
   const login = async (email, password) => {
     try {
@@ -22,6 +23,16 @@ export const useAuth = () => {
     }
   };
 
+  const register = async (email, password) => {
+    error.value = null;
+    try {
+      const userCredential = await createUserWithEmailAndPassword($auth, email, password);
+      user.value = userCredential.user;
+    } catch (err) {
+      error.value = err.message;
+    }
+  };
+
   const logout = async () => {
     try {
       await signOut($auth); // Desloga o usuário
@@ -32,5 +43,5 @@ export const useAuth = () => {
     }
   };
 
-  return { user, login, logout };
+  return { user, login, logout, register };
 };

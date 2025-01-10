@@ -20,6 +20,7 @@
           icon="mdi-logout"
           size="small"
           variant="tonal"
+          aria-label="Sair do app" 
           tile
           rounded="lg"
           @click="handleLogout()"
@@ -46,10 +47,12 @@
       <v-card title="Nova Tarefa" rounded="t-xl" class="glass">
         <v-textarea
           class="mx-6"
+          autofocus
           clearable
           variant="plain"
           placeholder="Escreva aqui..."
           auto-grow
+          aria-label="Escreva aqui" 
           v-model="newTask.description"
         ></v-textarea>
         <v-row class="ma-4 d-flex justify-end ga-2">
@@ -70,8 +73,11 @@ import { useRouter } from "vue-router";
 import { ref, reactive } from "vue";
 
 definePageMeta({
-  middleware: "auth", // Aplica o middleware de autenticação usando Composition API
+  middleware: "auth", // Aciona o middleware de autenticação para acessar a pagina
 });
+const TaskList = defineAsyncComponent(() =>
+  import('~/components/TaskList.vue')
+);
 
 const { createTask } = useTasks();
 const { logout } = useAuth();
@@ -117,7 +123,7 @@ const handleLogout = async () => {
 }
 
 .app-background {
-  background-image: url("../assets/background.jpg");
+  background-image: url("../assets/background.webp");
   background-size: cover;
   background-position: center;
   height: 100vh;
